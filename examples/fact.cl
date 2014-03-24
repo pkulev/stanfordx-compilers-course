@@ -26,8 +26,8 @@ class Main inherits A2I {
 	   fi fi;	   
 	   
 	   io.out_string(output.concat(i2a(fact)).concat(".\n"));
-	   }
-  ; } };
+	   }; 
+   } };
    
    ifact(i: Int): Int {
        let fact: Int <- 1 in {
