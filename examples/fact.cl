@@ -15,15 +15,15 @@ class Main inherits A2I {
 	   output: String <- "Factorial of ".concat(i2a(num)).concat(" is ")
        in {
 	   if (choise = 1) then
-	      fact <- a2i(ifact(num)
+	      fact <- a2i(ifact(num))
 	   else if (choise = 2) then
-	      fact <- a2i(rfact(num)
+	      fact <- a2i(rfact(num))
            else io.out_string("Choose factorial method (1 or 2)\n")
-	   fi fi	   
+	   fi fi;	   
 	   
-	   io.out_string(output.concat(i2a(fact).concat(".\n")
+	   io.out_string(output.concat(i2a(fact)).concat(".\n"));
 	   }
-   } };
+   }; };
    
    ifact(i: Int): Int {
        let fact: Int <- 1 in {
