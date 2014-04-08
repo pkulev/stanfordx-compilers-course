@@ -69,6 +69,7 @@ NOT          	[Nn][Oo][Tt]
 LOOP          	[Ll][Oo][Oo][Pp]
 TYPEID 		[A-Z][A-Za-z0-9_]*
 OBJECTID	[a-z][A-Za-z0-9_]*
+INT_CONST	[0-9]+
 
 %%
 
@@ -125,7 +126,12 @@ f[Aa][Ll][Ss][Ee]	{ cool_yylval.boolean = false;
 	 cool_yylval.symbol = inttable.add_string(yytext);
 	 return (TYPEID); }
 
+{INT_CONST} {
+	  cool_yylval.symbol = inttable.add_string(yytext);
+	  return (INT_CONST); }
 
+"--".*
+[ \f\r\t\v]+
 .			
 
 
